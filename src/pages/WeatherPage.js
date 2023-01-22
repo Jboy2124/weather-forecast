@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { api } from '../utils/Axios';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { format } from 'date-fns';
 
 const WeatherPage = () => {
   // const [weatherData, setWeatherData] = useState([])
