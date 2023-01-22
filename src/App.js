@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoadingPage from './pages/LoadingPage'
 import NotFoundPage from './pages/NotFoundPage'
-// import ProtectRoutes from './utils/ProtectRoutes'
+// import ProtectedRoutes from './utils/ProtectRoutes'
 // import WeatherPage from './pages/WeatherPage'
 // import LandingPage from './pages/WeatherPage'
 // import Homepage from './pages/WeatherPage'
@@ -16,7 +16,11 @@ const App = () => {
     <Router>
         <Suspense fallback={<LoadingPage />}>
             <Routes>
-                <Route exact path='/' element={<Homepage />}></Route>
+              {/* <Route element={<ProtectedRoutes /> }>
+                  <Route exact path='/' element={<Homepage />} ></Route>
+                  <Route path='/weather' element={<WeatherPage />}></Route>
+              </Route> */}
+                <Route exact path='/' element={<Homepage />} ></Route>
                 <Route path='/weather' element={<WeatherPage />}></Route>
                 <Route path='/login' element={<LandingPage />}></Route>
                 <Route path='*' element={<NotFoundPage />}></Route>

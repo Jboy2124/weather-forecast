@@ -1,11 +1,13 @@
-import React from 'react'
-import { Outlet, Navigate } from 'react-router-dom'
+import { Outlet, Navigate} from "react-router-dom";
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ProtectRoutes = () => {
-    let auth = { token: false }
-  return (
-    auth.token ? <Outlet /> : <Navigate to='/login' />
-  )
+  const { isAuthenticated } = useAuth0();
+    return (
+      (isAuthenticated) ? <Outlet /> : <Navigate to='/login' />
+    )
 }
 
 export default ProtectRoutes
+
