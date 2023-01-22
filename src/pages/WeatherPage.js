@@ -73,12 +73,6 @@ const WeatherPage = () => {
                           <td className='border-r'>{main}</td>
                           <td className='border-r'>{pressure}</td>
                           <td className='border-r'>{humid}</td>
-                          {/* <td className='border-r'>{weatherData.dt}</td>
-                          <td className='border-r'>{weatherData.main.temp}</td>
-                          <td className='border-r'>{weatherData.weather[0].description}</td>
-                          <td className='border-r'>{weatherData.weather[0].main}</td>
-                          <td className='border-r'>{weatherData.main.pressure}</td>
-                          <td className='border-r'>{weatherData.main.humidity}</td> */}
                         </tr>
                       </tbody>
                    </table>
