@@ -1,23 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { actions } from '../redux/slices/SliceCity'
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 const Homepage = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const { user } = useAuth0();
+
 
   const submitInfo = (data) => {
     dispatch(actions.getCity(data))
     setTimeout(() => {
       navigate('/weather')
     }, 300)
-
   }
+
 
 
   return (
@@ -27,7 +30,7 @@ const Homepage = () => {
             <div className='min-h-[90vh] flex justify-center items-center'>
                 <form onSubmit={handleSubmit(submitInfo)}>
                   <div className='flex flex-col items-center'>
-                      <div>Name</div>
+                      <div>{user.name}</div>
                       <div>github</div>
                   </div>
                   <div className='flex items-center w-[400px] h-full rounded-full border border-gray-300 pr-[13px]'>
