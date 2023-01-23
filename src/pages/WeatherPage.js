@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import { api } from '../utils/Axios';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { withAuthenticationRequired } from '@auth0/auth0-react';
+import LoadingPage from './LoadingPage';
 
 const WeatherPage = () => {
   const [weatherData, setWeatherData] = useState([])
@@ -67,4 +69,6 @@ const WeatherPage = () => {
   )
 }
 
-export default WeatherPage
+export default withAuthenticationRequired(WeatherPage, {
+  onRedirecting: () => <LoadingPage />
+})

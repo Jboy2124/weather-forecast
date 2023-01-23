@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { actions } from '../redux/slices/SliceCity'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react'
+import LoadingPage from './LoadingPage'
 
 
 const Homepage = () => {
@@ -49,4 +50,6 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default withAuthenticationRequired(Homepage, {
+  onRedirecting: () => <LoadingPage />
+})
