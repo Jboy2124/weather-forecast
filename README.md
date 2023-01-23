@@ -1,73 +1,55 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ABOUT THE PROJECT
+    - The Project is a simple Weather Forecast that displays the weather base on the selected City.
+    - It uses the API (https://openweathermap.org/forecast16#geo16)
 
 
-###
+BUILD WITH
+    - ReactJS with TailwindCSS
+
+
+PAGES 
+    -It has three (3) pages (Landing Page/Login Page, Homepage, Weather Page)
+    -It has two (2) miscellaneous pages (404 Page, Loading Page)
+    -It utilizes the AUTH0 for authentication
+    -It has two (2) protected routes (Home, Weather)
+
+
+DEPENDENCIES/NPM PACKAGES
+    1. "@auth0/auth0-react": "^2.0.0",
+    2. "@reduxjs/toolkit": "^1.9.1",
+    3. "axios": "^1.2.3",
+    4. "react": "^18.2.0",
+    5. "react-dom": "^18.2.0",
+    6. "react-hook-form": "^7.42.1",
+    7. "react-redux": "^8.0.5",
+    8. "react-router-dom": "^6.7.0",
+    9. "react-scripts": "5.0.1",
+    10. "react-spinners": "^0.13.8",
+    11. "redux": "^4.2.0",
+
+
+INSTALLATION
+    These are the procedures how you can install and setup the app.
+
+    1. Register and tet a free API Key 
+        at https://openweathermap.org/forecast16#geo16
+    
+    2. Register also  at auth0.com (if necessary), to generate the domain and clientId, to be use to authentication
+        https://www.auth0.com
+
+    2. Clone the Repo 
+        git clone https://github.com/Jboy2124/weather-forecast.git
+
+    3. Install NPM Packages
+        npm install
+
+    4. Enter your API key at .env
+        - you need to input all the necessary keys here
+            REACT_APP_AUTH0_DOMAIN=
+            REACT_APP_AUTH0_CLIENT_ID=
+
+            WEATHER_APP_ID=
+
+
+
+
