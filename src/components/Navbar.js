@@ -18,7 +18,6 @@ const Navbar = () => {
                 </div>
                 {/* Logout button  */}
                 <div className='flex items-center'>
-                    {/* <button type="button" className='rounded shadow-lg bg-[#1F3C88] px-12 py-2 text-white'>Logout</button> */}
                     <LogoutButton />
                 </div>
             </div>

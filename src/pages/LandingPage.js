@@ -13,7 +13,6 @@ const LandingPage = () => {
                 <div className='flex flex-col'>
                     <h4 className='text-[20px]'>Welcome to the weather forecast web application. Please login with your Github User to use the application and view weather in your city.</h4>
                     <div className='my-4'>
-                        {/* <button type='button' className='rounded shadow-lg bg-[#1F3C88] px-12 py-2 text-[16px] text-white'>Login</button> */}
                         <LoginButton />
                         <LogoutButton />
                     </div>

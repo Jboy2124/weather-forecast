@@ -10,7 +10,7 @@ function LogoutButton() {
   return isAuthenticated && (
     <button onClick={() => {
       logout({ returnTo: window.location.origin });
-    }} className='rounded shadow-lg px-12 py-2 bg-[#1F3C88] text-white'>Log out</button>
+    }} className='rounded shadow-lg px-12 py-2 bg-[#1F3C88] text-white'>Sign out</button>
   );
 }
 

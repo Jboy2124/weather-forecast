@@ -22,10 +22,9 @@ const WeatherPage = () => {
       .catch(error => {
         console.log(error)
       })
-    }
-
+    };
     getData()
-  }, [])
+  }, [currentCity])
 
   
   return (
